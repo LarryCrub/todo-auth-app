@@ -1,0 +1,61 @@
+{
+    "root": true,
+    "parser": "@babel/eslint-parser",
+    "plugins": [
+      "react",
+      "react-hooks",
+      "prettier",
+      "json-format"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true,
+      "worker": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      },
+      "json/sort-package-json": "standard",
+      "json/json-with-comments-files": [
+        "**/tsconfig.json",
+        ".vscode/**"
+      ]
+    },
+    "ignorePatterns": [
+      "!.*"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "endOfLine": "auto"
+        }
+      ],
+      "react/prop-types": "off"
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2020
+    }
+  }
